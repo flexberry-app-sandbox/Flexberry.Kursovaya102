@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ДирОтдПоРабСКл",
+      "projection": "ДирОтдПоРабСКлL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиент",
+      "projection": "КлиентL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Заключ договора",
+  "name": "IISKursovaya10ЗаключДоговораE",
+  "className": "ЗаключДоговораE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya10-заключ-договора",
+      "modelProjection": "ЗаключДоговораE"
+    }
+  ]
+}

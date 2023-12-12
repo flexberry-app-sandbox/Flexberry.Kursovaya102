@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Kursovaya10",
+  "applicationTitle": "Kursovaya10",
+  "items": [
+    {
+      "link": null,
+      "menuName": "kursovaya10",
+      "caption": "Kursovaya10",
+      "title": "Kursovaya10",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya10-расчет-ост-врем-l",
+          "menuName": null,
+          "caption": "Расчет ост врем",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya10-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya10-заключ-договора-l",
+          "menuName": null,
+          "caption": "Заключ договора",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya10-дир-отд-по-раб-с-кл-l",
+          "menuName": null,
+          "caption": "Дир отд по раб с кл",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya10-расторж-договора-l",
+          "menuName": null,
+          "caption": "Расторж договора",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

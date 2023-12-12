@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISKursovaya10РасчетОстВрем",
+  "modelName": "i-i-s-kursovaya10-расчет-ост-врем",
+  "className": "РасчетОстВрем",
+  "nameSpace": "IIS.Kursovaya10",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "доступно",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "использовано",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расторжДоговора",
+      "relatedTo": "i-i-s-kursovaya10-расторж-договора",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "оказКонсульт",
+      "relatedTo": "i-i-s-kursovaya10-оказ-консульт",
+      "inverse": "расчетОстВрем"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасчетОстВремE",
+      "modelName": "i-i-s-kursovaya10-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Дата",
+          "lookupValueField": "дата",
+          "relationName": "РасторжДоговора",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Расторж договора",
+          "name": "расторжДоговора",
+          "relatedTo": "i-i-s-kursovaya10-расторж-договора",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ОказКонсультE",
+          "caption": "Оказ консульт",
+          "name": "оказКонсульт",
+          "relatedTo": "i-i-s-kursovaya10-оказ-консульт",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетОстВремL",
+      "modelName": "i-i-s-kursovaya10-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "РасторжДоговора",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Дата",
+          "name": "расторжДоговора",
+          "relatedTo": "i-i-s-kursovaya10-расторж-договора",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

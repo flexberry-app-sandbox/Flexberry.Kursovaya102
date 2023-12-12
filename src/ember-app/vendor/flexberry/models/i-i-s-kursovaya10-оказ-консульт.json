@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISKursovaya10ОказКонсульт",
+  "modelName": "i-i-s-kursovaya10-оказ-консульт",
+  "className": "ОказКонсульт",
+  "nameSpace": "IIS.Kursovaya10",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяКонсульт",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "предостУслуга",
+      "type": "i-i-s-kursovaya10-услуга",
+      "flexberryType": "Услуга",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетОстВрем",
+      "relatedTo": "i-i-s-kursovaya10-расчет-ост-врем",
+      "inverse": "оказКонсульт"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОказКонсультE",
+      "modelName": "i-i-s-kursovaya10-оказ-консульт",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяКонсульт",
+          "caption": "Время консульт",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "предостУслуга",
+          "caption": "Предост услуга",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "РасчетОстВрем",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "доступно",
+              "caption": "",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "использовано",
+              "caption": "",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "",
+          "name": "расчетОстВрем",
+          "relatedTo": "i-i-s-kursovaya10-расчет-ост-врем",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
